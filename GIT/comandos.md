@@ -1,7 +1,7 @@
 # Comandos
 
 * git init
-    - Inicia um repositorio na sua maquina
+    - Inicializa o git em uma pasta do seu computador
 
 * git add
     - 
