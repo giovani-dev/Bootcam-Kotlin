@@ -16,3 +16,33 @@
 
     4. Commit
         - O commit aponta para uma arvore, parente, data e hora da alteracao, autor e menssagem. Assim possibilitando ter um rastreio do projeto, sendo gerado e transposto para um hash sha-1.
+
+# Ciclo de vida dos arquivos no Git
+
+* Tracked e untracked
+
+    1. Quando estao em no modo Tracked, os arquivos sao separados em 3 fazes
+        - Unmodified
+            - Quando **removemos um arquivo**, o estado do git **sai de Tracked e da faze Unmodified para o estado Untracked.**
+            - Ao **editar um arquivo** o git move ele para a faze **Modified.**
+        - Modified
+            - Stage do arquivo
+        - Staged
+            - Quando damos um **commit o arquivo vai para a faze unmodified.**
+
+    2. Untracked
+        - E quando o Git nao tem ciencia dos arquivos.
+        - Quando Nos **adicionamos um arquivo**, o git vai para o estado **Tracked na faze Staged**, assim criando um snapshot do codigo dentro do commit.
+
+* Repercucao do codigo
+    1. Ambiente de desenvolvimento
+        - Working Directory
+            - Vai apra essa area quando executo o comando git add
+        - Staging Area
+            - Vai apra essa area quando executo o comando git add
+        - Local Repository
+            - Vai apra essa area quando executo o comando git commit
+
+    2. Servidor
+        - Remote Repository
+            - Vai apra essa area quando executo o comando git push
